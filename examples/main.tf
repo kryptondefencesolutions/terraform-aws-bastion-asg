@@ -7,7 +7,7 @@ module "bastion-asg" {
   prefix         = "bastion"
   name           = "Bastion-${module.shared_vars.environment}"
   amis           = data.aws_ami.ubuntu.id
-  environment    = module.shared_vars.environment
+  environment    = module.shared_vars.environment //used in conjunction with general build module, change to var
   public_ssh_key = var.public_ssh_key
   min_size       = "1"
   max_size       = "2"
