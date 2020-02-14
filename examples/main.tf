@@ -1,7 +1,8 @@
-module "bastion" {
-  source  = "anub1s187/bastion-asg/aws"
+module "bastion-asg" {
+  source  = "kryptondefencesolutions/bastion-asg/aws"
   version = "0.12.6"
   # insert the 12 required variables here
+}
 
   prefix         = "bastion"
   name           = "Bastion-${module.shared_vars.environment}"
